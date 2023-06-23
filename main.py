@@ -1,7 +1,13 @@
+import os
+
 import cv2
 import PyPDF2
-pdf1_path = 'path/to/first_document.pdf'
-pdf2_path = 'path/to/second_document.pdf'
+
+
+documentation1_files = os.listdir("dataset/documentation1/documentation1/")
+
+pdf1_path = f'dataset/documentation1/documentation1/{documentation1_files[0]}'
+pdf2_path = f'dataset/documentation1/documentation1/{documentation1_files[1]}'
 
 pdf1 = open(pdf1_path, 'rb')
 pdf2 = open(pdf2_path, 'rb')
